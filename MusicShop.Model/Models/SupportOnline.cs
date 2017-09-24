@@ -8,7 +8,7 @@ namespace MusicShop.Model.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ID { set; get; }
+        public long ID { set; get; }
 
         [Required]
         [MaxLength(50)]
@@ -32,7 +32,6 @@ namespace MusicShop.Model.Models
         [MaxLength(50)]
         public string Facebook { set; get; }
 
-        [MaxLength(50)]
         public bool Status { set; get; }
 
         public int? DisplayOrder { set; get; }

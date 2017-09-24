@@ -8,7 +8,7 @@ namespace MusicShop.Model.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ID { set; get; }
+        public long ID { set; get; }
 
         [Required]
         [MaxLength(256)]

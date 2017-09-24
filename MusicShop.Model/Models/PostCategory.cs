@@ -10,7 +10,7 @@ namespace MusicShop.Model.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ID { set; get; }
+        public long ID { set; get; }
 
         [Required]
         [MaxLength(256)]
@@ -24,7 +24,7 @@ namespace MusicShop.Model.Models
         [MaxLength(500)]
         public string Description { set; get; }
 
-        public int? ParentID { set; get; }
+        public long? ParentID { set; get; }
         public int? DisplayOrder { set; get; }
 
         [MaxLength(256)]

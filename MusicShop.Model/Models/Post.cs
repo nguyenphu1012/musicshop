@@ -1,4 +1,5 @@
 ﻿using MusicShop.Model.Abstract;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -9,7 +10,7 @@ namespace MusicShop.Model.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ID { set; get; }
+        public long ID { set; get; }
 
         [Required]
         [MaxLength(256)]
@@ -21,7 +22,7 @@ namespace MusicShop.Model.Models
         public string Alias { set; get; }
 
         [Required]
-        public int CategoryID { set; get; }
+        public long CategoryID { set; get; }
 
         [MaxLength(256)]
         public string Image { set; get; }
@@ -37,5 +38,7 @@ namespace MusicShop.Model.Models
 
         [ForeignKey("CategoryID")]
         public virtual PostCategory PostCategory { set; get; }
+
+        public virtual IEnumerable<PostTag> PostTags { set; get; }
     }
 }

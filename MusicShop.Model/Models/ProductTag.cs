@@ -7,10 +7,11 @@ namespace MusicShop.Model.Models
     public class ProductTag
     {
         [Key]
-        public int ProductID { set; get; }
+        [Column(Order = 1)]
+        public long ProductID { set; get; }
 
         [Key]
-        [Column(TypeName = "varchar")]
+        [Column(TypeName = "varchar", Order = 2)]
         [MaxLength(50)]
         public string TagID { set; get; }
 

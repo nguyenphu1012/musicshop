@@ -1,7 +1,6 @@
 ﻿using MusicShop.Model.Abstract;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Xml.Linq;
 
 namespace MusicShop.Model.Models
 {
@@ -18,11 +17,12 @@ namespace MusicShop.Model.Models
         [Required]
         public string Alias { get; set; }
 
-        public int CategoryID { get; set; }
+        public long CategoryID { get; set; }
 
         public string Image { get; set; }
 
-        public XElement MoreImages { get; set; }
+        [Column(TypeName = "xml")]
+        public string MoreImages { get; set; }
 
         public decimal Price { get; set; }
 

@@ -7,10 +7,12 @@ namespace MusicShop.Model.Models
     public class OrderDetail
     {
         [Key]
-        public int OrderID { set; get; }
+        [Column(Order = 1)]
+        public long OrderID { set; get; }
 
         [Key]
-        public int ProductID { set; get; }
+        [Column(Order = 2)]
+        public long ProductID { set; get; }
 
         public int Quantitty { set; get; }
 
